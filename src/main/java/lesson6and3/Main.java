@@ -1,4 +1,4 @@
-package lesson6and1;
+package lesson6and3;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,8 +9,8 @@ public class Main {
         numb[3] = 4;
         numb[4] = 5;
 
-        for (int i = 0; i < numb.length ; i++) {
-            System.out.println(numb[i]);
+        for (int i = 0; i <= numb.length -1 ; i++) {
+            System.out.println(numb[numb.length - i - 1]);
         }
     }
 }
