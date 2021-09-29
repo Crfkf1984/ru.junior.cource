@@ -9,8 +9,10 @@ public class Main {
         numb[3] = 4;
         numb[4] = 5;
 
-        for (int i = 0; i <= numb.length -1 ; i++) {
-            System.out.println(numb[numb.length - i - 1]);
+        int s = 0;
+        for (int i = 0; i < numb.length ; i++) {
+          numb[i] = numb.length - i;
+            System.out.println(numb[i]);
         }
     }
 }
