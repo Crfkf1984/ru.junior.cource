@@ -18,12 +18,10 @@ public class Main {
 
         int s = 0;
         int r = 0;
-        for (int i = 0; i < numb.length; i++) {
+        for (int i = 0; i < numb.length / 2; i++) {
              s =  numb[i];
              numb[i] = numb[numb.length - i - 1];
             numb[numb.length - i - 1] = s;
-            if(i == numb.length / 2)
-                break;
         }
 
         Arrays.stream(numb).forEach(System.out::println);
