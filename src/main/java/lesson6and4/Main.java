@@ -16,9 +16,9 @@ public class Main {
 
             if ((Math.abs(temperatura - 36.2) >= 1e-7) && (Math.abs(temperatura - 36.9)  >= 1e-7)) {
                 count++;
+                temperatura += temperatura;
             }
 
-            temperatura += temperatura;
             System.out.print((double) Math.round(res * 100) / 100 + " ");
         }
         System.out.println();

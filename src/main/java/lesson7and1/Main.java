@@ -8,8 +8,9 @@ public class Main {
         System.out.println("Введите число !");
         int res = scanner.nextInt();
         for (int i = 1; i <= res; i++) {
-            int numb = res * i;
+            int numb = (int) Math.pow(res, i);
             System.out.println(numb);
         }
+
     }
 }
