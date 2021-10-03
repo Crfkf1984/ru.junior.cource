@@ -1,28 +1,23 @@
 package lesson6and4;
 
-import java.util.Random;
-
 public class Main {
     public static void main(String[] args) {
         int[] pazient = new int[10];
         double min = 32;
         double max = 40;
-        double res = Math.random() * ((max - min) + 1) + min;
-        double temperatura = 0;
         int count = 0;
         int tempsum = 0;
-        double cons = 1e-7;
+        double cons = 1e-0;
         for (int i = 0; i < pazient.length; i++) {
-            double numb = Math.round(Math.random() * ((max - min) + 1) + min);
-            temperatura = (double) Math.round(res * 100) / 100;
+            double numbTemp = Math.round(Math.random() * ((max - min) + 1) + min);
 
-            if ((Math.abs(temperatura - 36.2) >= cons) && (Math.abs(temperatura - 36.9)  >= cons)) {
+            if ((Math.abs(numbTemp - 36.2) <= cons) && (Math.abs(numbTemp - 36.9)  <= cons)) {
                 count++;
             }
 
-             tempsum += temperatura;
+             tempsum += numbTemp;
 
-            System.out.print((double) Math.round(res * 100) / 100 + " ");
+            System.out.print(numbTemp + " ");
         }
         System.out.println();
         double sredneeZnachenieTemperatur = tempsum / pazient.length;
