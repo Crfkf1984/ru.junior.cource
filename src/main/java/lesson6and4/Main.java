@@ -10,8 +10,7 @@ public class Main {
         int count = 0;
         double cons = 1e-0;
         for (int i = 0; i < pazient.length; i++) {
-            double numbTemp = Math.round(Math.random() * ((max - min) + 1) + min);
-            pazient[i] = numbTemp;
+            pazient[i] = Math.round(Math.random() * ((max - min) + 1) + min);
 
             if (((Math.abs(pazient[i]) - 36.2) >= cons) && ((Math.abs(pazient[i]) - 36.9)  <= cons)) {
                 count++;
