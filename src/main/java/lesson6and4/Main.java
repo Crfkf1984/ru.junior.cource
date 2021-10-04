@@ -10,17 +10,17 @@ public class Main {
         int count = 0;
         double cons = 1e-0;
         for (int i = 0; i < pazient.length; i++) {
-            pazient[i] = Math.round(Math.random() * ((max - min) + 1) + min);
+            pazient[i] = Math.random() * ((max - min) + 1) + min;
 
-            if (((Math.abs(pazient[i]) - 36.2) >= cons) && ((Math.abs(pazient[i]) - 36.9)  <= cons)) {
+            if (((Double.compare(pazient[i],36.2)) >= cons) && ((Double.compare(pazient[i],36.9)  <= cons))) {
                 count++;
             }
 
-            System.out.print(pazient[i] + " ");
+            System.out.printf(" " + "%.2f",pazient[i]);
         }
         System.out.println();
         double sredneeZnachenieTemperatur = Arrays.stream(pazient).sum() / pazient.length;
-        System.out.println("средняя температура " + (double) Math.round(sredneeZnachenieTemperatur * 100) / 100);
-        System.out.println("Количество здоровых пациентов " + count);
+        System.out.printf(" Количество здоровых пациентов " + count
+                + " средняя температура " + "%.2f",(sredneeZnachenieTemperatur * 100) / 100);
     }
 }
