@@ -8,11 +8,11 @@ public class Main {
         double min = 32;
         double max = 40;
         int count = 0;
-        double cons = 1e-0;
+       // double cons = 1e-0;
         for (int i = 0; i < pazient.length; i++) {
             pazient[i] = Math.random() * ((max - min) + 1) + min;
 
-            if (((Double.compare(pazient[i],36.2)) >= cons) && ((Double.compare(pazient[i],36.9)  <= cons))) {
+            if ((pazient[i] >= min) && (pazient[i]  <= max)) {
                 count++;
             }
 
