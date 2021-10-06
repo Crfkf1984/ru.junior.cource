@@ -15,11 +15,11 @@ public class Main {
                 count++;
             }
 
-            System.out.printf(" " + "%.2f",pazient[i]);
+            System.out.printf(" %.2f",pazient[i]);
         }
         System.out.println();
         double sredneeZnachenieTemperatur = Arrays.stream(pazient).sum() / pazient.length;
         System.out.printf(" Количество здоровых пациентов " + count
-                + " средняя температура " + "%.2f",(sredneeZnachenieTemperatur * 100) / 100);
+                + " средняя температура %.2f",sredneeZnachenieTemperatur);
     }
 }

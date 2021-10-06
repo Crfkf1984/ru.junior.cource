@@ -13,5 +13,13 @@ public class Main {
         numb[7] = 8;
         numb[8] = 8;
         numb[9] = 8;
+
+        for (int i = 0; i < numb.length; i++) {
+            for (int j = 1; j < numb.length; j++) {
+                if (numb[i] == numb[j]){
+                    System.out.println(numb[i]);
+                }
+            }
+        }
     }
 }
