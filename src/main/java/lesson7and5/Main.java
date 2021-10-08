@@ -1,8 +1,5 @@
 package lesson7and5;
 
-import java.util.HashMap;
-import java.util.HashSet;
-
 public class Main {
     public static void main(String[] args) {
         int count2 = 0;
