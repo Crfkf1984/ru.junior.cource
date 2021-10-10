@@ -19,7 +19,7 @@ public class Main {
 
         for (int i = 0; i < numb.length; i++) {
             pupular1 = numb[i];
-            int count1 = 1;
+            int count1 = 0;
             for (int j = i + 1; j < numb.length; j++) {
                 if (pupular1 == numb[j]) {
                     count1++;
