@@ -8,14 +8,10 @@ public class Main {
         System.out.println("Введите ФИО");
         String fio = scanner.nextLine();
 
-        if (fio.matches("[а-яА-Я,\\s]+")) {
+        if (fio.matches("[А-я,\\s]+")) {
             String[] res = fio.split(" ");
-            if (res.length == 3) {
                 System.out.println("Фамилия : " + res[0] + "\n"
                         + "Имя : " + res[1] + "\n" + "Отчество : " + res[2]);
-            } else {
-                System.out.println("Введенная строка не является Ф.И.О");
-            }
         } else {
             System.out.println("Вы ввели недопустимый символ в ФИО!");
         }
