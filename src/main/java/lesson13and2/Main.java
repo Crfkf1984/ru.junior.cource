@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Введите ФИО");
         String fio = scanner.nextLine();
 
-        if (fio.matches("[А-я]+ [А-я]+ [А-я]+")) {
+        if (fio.matches("[А-я-]+ [-А-я]+ [-А-я]+")) {
             String[] res = fio.split( " ");
                 System.out.println("Фамилия : " + res[0] + "\n"
                         + "Имя : " + res[1] + "\n" + "Отчество : " + res[2]);
