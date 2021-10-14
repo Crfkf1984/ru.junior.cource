@@ -22,10 +22,7 @@ public class Main {
 
     public static String word(String str){
         String def = str.replace(" ", "\n");
-//        if (def.equals(str.matches("[0-9]"))) {
-//
-//        }
-//        }
+
         return def;
     }
 }
