@@ -15,14 +15,13 @@ public class Main {
         int numb = 0;
         LocalDate today = LocalDate.now();
         LocalDate date = LocalDate.of(year, month, day);
-        System.out.println( "" + numb + "" + " - " + date.format(pattern) + " - " + date.getDayOfWeek() );
 
        while (!date.isAfter(today)) {
-           numb++;
            int count = 0;
             count ++;
-            date = date.plusYears(count);
            System.out.println("" + numb + " - " + date.format(pattern) + " - " + date.getDayOfWeek());
+           date = date.plusYears(count);
+           numb++;
        }
     }
 }
