@@ -1,9 +1,7 @@
 package lesson15and1;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
