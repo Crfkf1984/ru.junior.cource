@@ -11,15 +11,14 @@ public class Main {
     }
 
     public static void collectBirthDays(int year, int month, int day) {
-        Calendar calendar = new GregorianCalendar(year, Calendar.SEPTEMBER, day);
+        Calendar calendar = new GregorianCalendar(year, month  - 1, day);
         Calendar now = Calendar.getInstance();
         SimpleDateFormat pattern = new SimpleDateFormat("dd.MM.yyyy - EE", Locale.US);
 
         int count = 0;
         while (!calendar.after(now)) {
-            int numb = 1;
             System.out.println("" + count++ + " - " + pattern.format(calendar.getTime()));
-            calendar.add(Calendar.YEAR, numb++);
+            calendar.add(Calendar.YEAR, 1);
         }
 
     }
