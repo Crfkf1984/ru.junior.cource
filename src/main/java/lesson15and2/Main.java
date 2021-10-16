@@ -13,13 +13,15 @@ public class Main {
     }
 
     public static void collectBirthDays(int year, int month, int day) {
+        int days = 1900;
         SimpleDateFormat pattern = new SimpleDateFormat("dd.MM.yyyy - EE", Locale.US);
         int numb = 0;
-        int today = new Date().getYear() + 1900;
+        int today = new Date().getYear() + days;
 
-        for (int i = year; i < today; i++) {
+        for (int i = year; i <= today; i++) {
 
-            System.out.println("" + numb + " - " + pattern.format(new Date(i - 1900, month - 1, day)));
+            System.out.println("" + numb + " - " + pattern.format(new Date(i - days, month - 1, day)));
+            numb++;
         }
 
     }
