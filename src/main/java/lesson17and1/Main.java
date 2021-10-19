@@ -19,10 +19,11 @@ public class Main {
                 System.out.println("Добавлено дело " + word.substring(word.indexOf(" ")));
 
             } else if (word.startsWith("EDIT")) {
-                String[] rt = word.split(" ");
-                int num = Integer.parseInt(rt[1]);
-                System.out.println("Дело " + list.get(num) + " заменено на " + word.substring(word.lastIndexOf(" ")));
-                list.add(num, word.substring(word.lastIndexOf(" ")));
+                int num = Integer.parseInt(word.replaceAll("[A-z]+", "").trim());
+                String str = word.replaceAll("\\d+", "").trim();
+                System.out.println("Дело " + list.get(num) + " заменено на " + str.substring(str.indexOf(" ")).trim());
+                list.remove(num);
+                list.add(num, str.substring(str.indexOf(" ")).trim());
 
 
             } else if (word.startsWith("LIST")) {
@@ -32,8 +33,7 @@ public class Main {
 
             } else if (word.startsWith("DELETE")) {
                 boolean rt = false;
-                String[] str  = word.split(" ");
-                int anInt = Integer.parseInt(str[1]);
+                int anInt = Integer.parseInt(word.replaceAll("[A-z]+", "").trim());
                 for (int i = 0; i < list.size(); i++) {
                     if (anInt == i) {
                         System.out.println("Дело " + list.get(i) + " удалено!");
@@ -41,9 +41,10 @@ public class Main {
                         rt = true;
                     }
 
-                    if (!rt) {
-                        System.out.println("Дело с таким номером не существует!");
-                    }
+                }
+
+                if (!rt) {
+                    System.out.println("Дело с таким номером не существует!");
                 }
 
             } else if (word.startsWith("EXIT")) {
