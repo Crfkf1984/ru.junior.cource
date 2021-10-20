@@ -27,7 +27,7 @@ public class Main {
                 edit(word);
 
             } else if (word.startsWith(LIST)) {
-                    list(word);
+                list();
 
             } else if (word.startsWith(DELETE)) {
                 remove(word);
@@ -50,20 +50,20 @@ public class Main {
         String[] str = word.split(" ");
         int num = Integer.parseInt(str[1]);
 
-        for (int i = 0; i < list.size(); i++) {
-            if (num == i) {
-                String result = "";
-                for (int j = 2; j < str.length; j++) {
-                    result += str[j] + " ";
-                }
-                System.out.println("Дело " + list.get(num) + " заменено на " + result);
-                list.set(num, result);
-            }
+
+        if (list.size() < num) {
+            return;
         }
+        String result = "";
+        for (int j = 2; j < str.length; j++) {
+            result += str[j] + " ";
+        }
+
+        System.out.println("Дело " + list.get(num) + " заменено на " + result);
+        list.set(num, result);
     }
 
-    public static void list(String word) {
-        List<String> str = new ArrayList<>();
+    public static void list() {
         if (list.size() == 0) {
             System.out.println("В данном списке пока ничего нет!");
         } else {
@@ -74,14 +74,14 @@ public class Main {
     }
 
     public static void remove(String word) {
-        String[] str  = word.split(" ");
+        String[] str = word.split(" ");
         int anInt = Integer.parseInt(str[1]);
-        for (int i = 0; i < list.size(); i++) {
-            if (anInt == i) {
-                System.out.println("Дело " + list.get(i) + " удалено!");
-                list.remove(i);
-            }
+
+        if (anInt > str.length) {
+            return;
         }
+        System.out.println("Дело " + list.get(anInt) + " удалено!");
+        list.remove(anInt);
     }
 
     public static void exit(String word) {
