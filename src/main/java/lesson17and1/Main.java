@@ -6,14 +6,13 @@ import java.util.Scanner;
 
 public class Main {
     public static List<String> list = new ArrayList<>();
+    static final String ADD = "ADD";
+    static final String EDIT = "EDIT";
+    static final String DELETE = "DELETE";
+    static final String EXIT = "EXIT";
+    static final String LIST = "LIST";
 
     public static void main(String[] args) {
-        final String ADD = "ADD";
-        final String EDIT = "EDIT";
-        final String DELETE = "DELETE";
-        final String EXIT = "EXIT";
-        final String LIST = "LIST";
-        //List<String> list = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         boolean res = true;
 
@@ -28,14 +27,10 @@ public class Main {
                 edit(word);
 
             } else if (word.startsWith(LIST)) {
-                List<String> rs = list(word);
-
-                for (int i = 0; i < rs.size(); i++) {
-                    System.out.println(i + " - " + rs.get(i));
-                }
+                    list(word);
 
             } else if (word.startsWith(DELETE)) {
-                delete(word);
+                remove(word);
 
             } else if (word.startsWith(EXIT)) {
                 exit(word);
@@ -46,8 +41,8 @@ public class Main {
     }
 
     public static void add(String word) {
-        list.add(word.substring(word.indexOf(" ")).trim());
         String todo = word.substring(word.indexOf(" "));
+        list.add(todo);
         System.out.println("Добавлено дело " + todo);
     }
 
@@ -62,25 +57,23 @@ public class Main {
                     result += str[j] + " ";
                 }
                 System.out.println("Дело " + list.get(num) + " заменено на " + result);
-                list.remove(num);
-                list.add(num, result);
+                list.set(num, result);
             }
         }
     }
 
-    public static List<String> list(String word) {
+    public static void list(String word) {
         List<String> str = new ArrayList<>();
         if (list.size() == 0) {
             System.out.println("В данном списке пока ничего нет!");
         } else {
             for (int i = 0; i < list.size(); i++) {
-                str.add(list.get(i));
+                System.out.println(i + " - " + list.get(i));
             }
         }
-        return str;
     }
 
-    public static void delete(String word) {
+    public static void remove(String word) {
         String[] str  = word.split(" ");
         int anInt = Integer.parseInt(str[1]);
         for (int i = 0; i < list.size(); i++) {
