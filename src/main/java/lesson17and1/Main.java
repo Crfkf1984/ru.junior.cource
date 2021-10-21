@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static List<String> list = new ArrayList<>();
-    static final String ADD = "ADD";
-    static final String EDIT = "EDIT";
-    static final String DELETE = "DELETE";
-    static final String EXIT = "EXIT";
-    static final String LIST = "LIST";
+    private static List<String> list = new ArrayList<>();
+    private static final String ADD = "ADD";
+    private static final String EDIT = "EDIT";
+    private static final String DELETE = "DELETE";
+    private static final String EXIT = "EXIT";
+    private static final String LIST = "LIST";
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -33,7 +33,7 @@ public class Main {
                 remove(word);
 
             } else if (word.startsWith(EXIT)) {
-                exit(word);
+                exit();
                 res = false;
             }
         }
@@ -47,20 +47,16 @@ public class Main {
     }
 
     public static void edit(String word) {
-        String[] str = word.split(" ");
+        String[] str = word.split(" ", 3);
         int num = Integer.parseInt(str[1]);
 
 
         if (list.size() < num) {
             return;
         }
-        String result = "";
-        for (int j = 2; j < str.length; j++) {
-            result += str[j] + " ";
-        }
-
-        System.out.println("Дело " + list.get(num) + " заменено на " + result);
-        list.set(num, result);
+        String todo = str[2];
+        System.out.println("Дело " + list.get(num) + " заменено на " + todo);
+        list.set(num, todo);
     }
 
     public static void list() {
@@ -77,14 +73,15 @@ public class Main {
         String[] str = word.split(" ");
         int anInt = Integer.parseInt(str[1]);
 
-        if (anInt > str.length) {
+        if (anInt > list.size()) {
+            System.out.println("ERROR");
             return;
         }
         System.out.println("Дело " + list.get(anInt) + " удалено!");
         list.remove(anInt);
     }
 
-    public static void exit(String word) {
+    public static void exit() {
         System.out.println("Вы вышли из программы!");
     }
 }
