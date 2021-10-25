@@ -11,10 +11,10 @@ public class Main {
     private static Map<String, String> map = new TreeMap<>();
 
     public static void main(String[] args) {
-        boolean rt = true;
+        boolean istrue = true;
         Scanner scanner = new Scanner(System.in);
 
-        while (rt) {
+        while (istrue) {
 
             System.out.println("Введите номер, имя или команду!");
             String word = scanner.nextLine();
@@ -31,7 +31,11 @@ public class Main {
             }
             if (word.startsWith(EXIT)) {
                 exit();
-                rt = false;
+                istrue = false;
+            }
+
+            if (word.matches("[!,&?А-я]+") || word.matches("[!,&?\\d]+")) {
+                System.out.println("Вы ввели недопустимый формат в " + word);
             }
 
         }
@@ -44,7 +48,7 @@ public class Main {
             String tel = "";
             for (Map.Entry<String, String> key : map.entrySet()) {
                 if (word.equals(key.getKey())) {
-                    String name = key.getKey();
+                    String name = word;
                     tel = key.getValue();
                     System.out.println(name + " - " + tel.replaceAll("(\\d)(\\d{3})(\\d{3})(\\d{2})(\\d{2})"
                             , "+7 ($2) $3 $4 - $5"));
@@ -55,20 +59,28 @@ public class Main {
             System.out.println("Такого имени в телефонной книге нет!");
             System.out.println("Введите номер телефона для абонента " + word);
             tel = res.nextLine().replaceAll("\\D", "").trim();
-            if (map.values().contains(tel)) {
+            if (map.containsValue(tel)) {
                 System.out.println("Данный номер телефона уже занят другим абонентом!");
                 return;
             }
-            map.put(word, tel);
-            System.out.println("Контакт сохранен!");
+            if (tel.length() == 11) {
+                map.put(word, tel);
+                System.out.println("Контакт сохранен!");
+            } else {
+                System.out.println("Вы ввели неполный телефонный номер!");
+            }
 
-        } else if (map.size() == 0) {
+        } else {
 
             System.out.println("Такого имени в телефонной книге нет!");
             System.out.println("Введите номер телефона для абонента " + word);
             String tel = res.nextLine().replaceAll("\\D", "").trim();
-            map.put(word, tel.replaceAll("\\D", ""));
-            System.out.println("Контакт сохранен!");
+            if (tel.length() == 11) {
+                map.put(word, tel.replaceAll("\\D", ""));
+                System.out.println("Контакт сохранен!");
+            } else {
+                System.out.println("Вы ввели неполный телефонный номер!");
+            }
 
         }
     }
@@ -78,8 +90,12 @@ public class Main {
         if (map.size() > 0) {
 
             for (Map.Entry<String, String> tel : map.entrySet()) {
+               if (word.replaceAll("\\D", "").trim().length() < 11) {
+                   System.out.println("Вы ввели неполный номер телефона!");
+                   return;
+               }
                 if (word.equals(tel.getValue())) {
-                    String name = tel.getKey();
+                    String name = word;
                     String num = tel.getValue();
                     System.out.println(name + " - " + num.replaceAll("(\\d)(\\d{3})(\\d{3})(\\d{2})(\\d{2})"
                             , "+7 ($2) $3 $4 - $5"));
@@ -89,11 +105,20 @@ public class Main {
 
             System.out.println("Такого номера нет в телефонной книге!");
             System.out.println("Введите имя абонента для номера " + word);
+            if (word.replaceAll("\\D", "").trim().length() < 11) {
+                System.out.println("Вы ввели неполный номер телефона!");
+                return;
+            }
             String name = res.nextLine();
             map.put(name, word);
             System.out.println("Контакт сохранен!");
 
-        } else if (map.size() == 0) {
+        } else {
+            if (word.replaceAll("\\D", "").trim().length() < 11) {
+                System.out.println("Вы ввели неполный номер телефона!");
+                return;
+            }
+
             System.out.println("Такого номера нет в телефонной книге!");
             System.out.println("Введите имя абонента для номера " + word);
             String name = res.nextLine();
