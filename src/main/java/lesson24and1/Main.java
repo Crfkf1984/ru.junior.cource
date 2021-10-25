@@ -4,8 +4,14 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
+    private static final Pattern NAME = Pattern.compile("^[А-я]+$");
+    private static final Pattern NUMB = Pattern.compile("\\d+");
+    private static final Pattern ISNAME = Pattern.compile("[!,&?А-я]+");
+    private static final Pattern ISNUM = Pattern.compile("[!,&?\\d]+");
     private static final String LIST = "LIST";
     private static final String EXIT = "EXIT";
     private static Map<String, String> map = new TreeMap<>();
@@ -19,10 +25,10 @@ public class Main {
             System.out.println("Введите номер, имя или команду!");
             String word = scanner.nextLine();
 
-            if (word.matches("^[А-я]+$")) {
+            if (word.matches(String.valueOf(NAME))) {
                 name(word);
             }
-            if (word.matches("\\d+")) {
+            if (word.matches(String.valueOf(NUMB))) {
                 telNum(word);
             }
 
@@ -34,7 +40,7 @@ public class Main {
                 istrue = false;
             }
 
-            if (word.matches("[!,&?А-я]+") || word.matches("[!,&?\\d]+")) {
+            if (word.matches(String.valueOf(ISNAME)) || word.matches(String.valueOf(ISNUM))) {
                 System.out.println("Вы ввели недопустимый формат в " + word);
             }
 
