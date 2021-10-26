@@ -2,45 +2,46 @@ package lesson24and1;
 
 import java.util.Map;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.TreeMap;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
-    private static final Pattern NAME = Pattern.compile("^[А-я]+$");
-    private static final Pattern NUMB = Pattern.compile("\\d+");
-    private static final Pattern ISNAME = Pattern.compile("[!,&?А-я]+");
-    private static final Pattern ISNUM = Pattern.compile("[!,&?\\d]+");
+    private static final Pattern NAME = Pattern.compile("^[А-я\\s+]+$");
+    private static final Pattern NUMB = Pattern.compile("[0-9\\s+]+$");
     private static final String LIST = "LIST";
     private static final String EXIT = "EXIT";
     private static Map<String, String> map = new TreeMap<>();
 
     public static void main(String[] args) {
-        boolean istrue = true;
+        boolean isFalse = false;
+        boolean isTrue = true;
         Scanner scanner = new Scanner(System.in);
 
-        while (istrue) {
+        while (isTrue) {
 
             System.out.println("Введите номер, имя или команду!");
             String word = scanner.nextLine();
 
             if (word.matches(String.valueOf(NAME))) {
                 name(word);
+                isFalse = true;
             }
             if (word.matches(String.valueOf(NUMB))) {
                 telNum(word);
+                isFalse = true;
             }
 
             if (word.startsWith(LIST)) {
                 list();
+                isFalse = true;
             }
             if (word.startsWith(EXIT)) {
                 exit();
-                istrue = false;
+                isTrue = false;
+                isFalse = true;
             }
 
-            if (word.matches(String.valueOf(ISNAME)) || word.matches(String.valueOf(ISNUM))) {
+            if (!isFalse) {
                 System.out.println("Вы ввели недопустимый формат в " + word);
             }
 
@@ -96,10 +97,7 @@ public class Main {
         if (map.size() > 0) {
 
             for (Map.Entry<String, String> tel : map.entrySet()) {
-               if (word.replaceAll("\\D", "").trim().length() < 11) {
-                   System.out.println("Вы ввели неполный номер телефона!");
-                   return;
-               }
+                   verify(word);
                 if (word.equals(tel.getValue())) {
                     String name = word;
                     String num = tel.getValue();
@@ -111,20 +109,13 @@ public class Main {
 
             System.out.println("Такого номера нет в телефонной книге!");
             System.out.println("Введите имя абонента для номера " + word);
-            if (word.replaceAll("\\D", "").trim().length() < 11) {
-                System.out.println("Вы ввели неполный номер телефона!");
-                return;
-            }
+             verify(word);
             String name = res.nextLine();
             map.put(name, word);
             System.out.println("Контакт сохранен!");
 
         } else {
-            if (word.replaceAll("\\D", "").trim().length() < 11) {
-                System.out.println("Вы ввели неполный номер телефона!");
-                return;
-            }
-
+                verify(word);
             System.out.println("Такого номера нет в телефонной книге!");
             System.out.println("Введите имя абонента для номера " + word);
             String name = res.nextLine();
@@ -146,5 +137,12 @@ public class Main {
 
     public static void exit() {
         System.out.println("Вы вышли из программы!");
+    }
+
+    public static void verify(String word) {
+        if (word.replaceAll("\\D", "").trim().length() < 11) {
+            System.out.println("Вы ввели неполный номер телефона!");
+            return;
+        }
     }
 }
