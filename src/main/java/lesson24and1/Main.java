@@ -93,7 +93,7 @@ public class Main {
     }
 
     public static void telNum(String word) {
-        Scanner res = new Scanner(System.in);
+
         if (map.size() > 0) {
 
             for (Map.Entry<String, String> tel : map.entrySet()) {
@@ -108,33 +108,15 @@ public class Main {
                     return;
                 }
             }
-            if (verify(word) == true) {
-                return;
-            }
-            System.out.println("Такого номера нет в телефонной книге!");
-            System.out.println("Введите имя абонента для номера " + word);
-            String name = res.nextLine();
-            if (verifyName(name) == true) {
-                return;
-            }
-                 map.put(name, word);
-                 System.out.println("Контакт сохранен!");
+
+            verifyresult(word);
 
         } else {
-            if (verify(word) == true) {
-                return;
-            }
-                System.out.println("Такого номера нет в телефонной книге!");
-                System.out.println("Введите имя абонента для номера " + word);
-                String name = res.nextLine();
-                if (verifyName(name) == true) {
-                    return;
-                }
-                map.put(name, word);
-                System.out.println("Контакт сохранен!");
-            }
+
+            verifyresult(word);
 
         }
+    }
 
     public static void list() {
         for (Map.Entry<String, String> res : map.entrySet()) {
@@ -166,6 +148,21 @@ public class Main {
            isNames = true;
         }
         return isNames;
+    }
+
+    public static void verifyresult(String word) {
+        Scanner res = new Scanner(System.in);
+        if (verify(word) == true) {
+            return;
+        }
+        System.out.println("Такого номера нет в телефонной книге!");
+        System.out.println("Введите имя абонента для номера " + word);
+        String name = res.nextLine();
+        if (verifyName(name) == true) {
+            return;
+        }
+        map.put(name, word);
+        System.out.println("Контакт сохранен!");
     }
 }
 
