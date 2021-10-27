@@ -9,13 +9,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<People> list = sortBySalaryAndAlphabet();
-        list.sort((d1, d2) -> {
-            if (d1.getSalary().compareTo(d2.getSalary()) != 0) {
-                return d2.getSalary().compareTo(d1.getSalary());
-            } else {
-                return d1.getName().compareTo(d2.getName());
-            }
-        });
 
         list.forEach(System.out::println);
 
@@ -37,6 +30,14 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        str.sort((d1, d2) -> {
+            if (d1.getSalary().compareTo(d2.getSalary()) != 0) {
+                return d1.getSalary().compareTo(d2.getSalary());
+            } else {
+                return d1.getName().compareTo(d2.getName());
+            }
+        });
 
         return str;
     }
