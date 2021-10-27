@@ -16,8 +16,11 @@ public class Main {
                 .setPrettyPrinting()
                 .create();
 
-        String testMan = chel.toJson(chel);
-        String testAny = any.toJson(any);
+        String testMan = chel.toJson(man);
+        String testAny = any.toJson(animal);
+
+        System.out.println(testMan);
+        System.out.println(testAny);
 
     }
 
