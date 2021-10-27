@@ -13,11 +13,11 @@ public class Main {
     private static Map<String, String> map = new TreeMap<>();
 
     public static void main(String[] args) {
-        boolean isFalse = false;
         boolean isTrue = true;
         Scanner scanner = new Scanner(System.in);
 
         while (isTrue) {
+            boolean isFalse = false;
 
             System.out.println("Введите номер, имя или команду!");
             String word = scanner.nextLine();
@@ -55,7 +55,7 @@ public class Main {
             String tel = "";
             for (Map.Entry<String, String> key : map.entrySet()) {
                 if (word.equals(key.getKey())) {
-                    String name = word;
+                    String name = key.getKey();
                     tel = key.getValue();
                     System.out.println(name + " - " + tel.replaceAll("(\\d)(\\d{3})(\\d{3})(\\d{2})(\\d{2})"
                             , "+7 ($2) $3 $4 - $5"));
@@ -97,7 +97,9 @@ public class Main {
         if (map.size() > 0) {
 
             for (Map.Entry<String, String> tel : map.entrySet()) {
-                   verify(word);
+                if (verify(word) == true) {
+                    return;
+                }
                 if (word.equals(tel.getValue())) {
                     String name = word;
                     String num = tel.getValue();
@@ -106,24 +108,33 @@ public class Main {
                     return;
                 }
             }
-
+            if (verify(word) == true) {
+                return;
+            }
             System.out.println("Такого номера нет в телефонной книге!");
             System.out.println("Введите имя абонента для номера " + word);
-             verify(word);
             String name = res.nextLine();
-            map.put(name, word);
-            System.out.println("Контакт сохранен!");
+            if (verifyName(name) == true) {
+                return;
+            }
+                 map.put(name, word);
+                 System.out.println("Контакт сохранен!");
 
         } else {
-                verify(word);
-            System.out.println("Такого номера нет в телефонной книге!");
-            System.out.println("Введите имя абонента для номера " + word);
-            String name = res.nextLine();
-            map.put(name, word);
-            System.out.println("Контакт сохранен!");
+            if (verify(word) == true) {
+                return;
+            }
+                System.out.println("Такого номера нет в телефонной книге!");
+                System.out.println("Введите имя абонента для номера " + word);
+                String name = res.nextLine();
+                if (verifyName(name) == true) {
+                    return;
+                }
+                map.put(name, word);
+                System.out.println("Контакт сохранен!");
+            }
 
         }
-    }
 
     public static void list() {
         for (Map.Entry<String, String> res : map.entrySet()) {
@@ -139,10 +150,23 @@ public class Main {
         System.out.println("Вы вышли из программы!");
     }
 
-    public static void verify(String word) {
+    public static boolean verify(String word) {
+        boolean isNums = false;
         if (word.replaceAll("\\D", "").trim().length() < 11) {
             System.out.println("Вы ввели неполный номер телефона!");
-            return;
+            isNums = true;
         }
+        return isNums;
+    }
+
+    public static boolean verifyName(String name) {
+        boolean isNames = false;
+        if (name.matches(String.valueOf(NAME))) {
+            System.out.println("Вы ввели неверный формат имени!");
+           isNames = true;
+        }
+        return isNames;
     }
 }
+
+
