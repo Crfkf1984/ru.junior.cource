@@ -6,8 +6,8 @@ import java.util.TreeMap;
 import java.util.regex.Pattern;
 
 public class Main {
-    private static final Pattern NAME = Pattern.compile("^[А-я\\s+]+$");
-    private static final Pattern NUMB = Pattern.compile("[0-9\\s+]+$");
+    private static final Pattern NAME = Pattern.compile("^[А-я\\s]+$");
+    private static final Pattern NUMB = Pattern.compile("[0-9+\\s+]+$");
     private static final String LIST = "LIST";
     private static final String EXIT = "EXIT";
     private static Map<String, String> map = new TreeMap<>();
@@ -97,7 +97,7 @@ public class Main {
         if (map.size() > 0) {
 
             for (Map.Entry<String, String> tel : map.entrySet()) {
-                if (verify(word) == true) {
+                if (verify(word)) {
                     return;
                 }
                 if (word.equals(tel.getValue())) {
@@ -109,11 +109,11 @@ public class Main {
                 }
             }
 
-            verifyresult(word);
+            isVerifyresult(word);
 
         } else {
 
-            verifyresult(word);
+            isVerifyresult(word);
 
         }
     }
@@ -143,22 +143,22 @@ public class Main {
 
     public static boolean verifyName(String name) {
         boolean isNames = false;
-        if (name.matches(String.valueOf(NAME))) {
+        if (!name.matches(String.valueOf(NAME))) {
             System.out.println("Вы ввели неверный формат имени!");
            isNames = true;
         }
         return isNames;
     }
 
-    public static void verifyresult(String word) {
+    public static void isVerifyresult(String word) {
         Scanner res = new Scanner(System.in);
-        if (verify(word) == true) {
+        if (verify(word)) {
             return;
         }
         System.out.println("Такого номера нет в телефонной книге!");
         System.out.println("Введите имя абонента для номера " + word);
         String name = res.nextLine();
-        if (verifyName(name) == true) {
+        if (verifyName(name)) {
             return;
         }
         map.put(name, word);
