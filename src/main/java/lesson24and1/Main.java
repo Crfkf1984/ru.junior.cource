@@ -101,7 +101,7 @@ public class Main {
                     return;
                 }
                 if (word.equals(tel.getValue())) {
-                    String name = word;
+                    String name = tel.getKey();
                     String num = tel.getValue();
                     System.out.println(name + " - " + num.replaceAll("(\\d)(\\d{3})(\\d{3})(\\d{2})(\\d{2})"
                             , "+7 ($2) $3 $4 - $5"));
@@ -109,11 +109,11 @@ public class Main {
                 }
             }
 
-            isVerifyresult(word);
+            isVerifyreSult(word);
 
         } else {
 
-            isVerifyresult(word);
+            isVerifyreSult(word);
 
         }
     }
@@ -150,7 +150,7 @@ public class Main {
         return isNames;
     }
 
-    public static void isVerifyresult(String word) {
+    public static void isVerifyreSult(String word) {
         Scanner res = new Scanner(System.in);
         if (verify(word)) {
             return;
