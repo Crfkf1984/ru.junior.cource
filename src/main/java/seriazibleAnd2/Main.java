@@ -23,6 +23,9 @@ public class Main {
 
         System.out.println(testMan);
 
+        Human human = chel.fromJson(testMan, Human.class);
+        System.out.println(human);
+
     }
 
 }
