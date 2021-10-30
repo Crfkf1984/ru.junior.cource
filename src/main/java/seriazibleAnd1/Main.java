@@ -22,6 +22,12 @@ public class Main {
         System.out.println(testMan);
         System.out.println(testAny);
 
+        Human human = chel.fromJson(testMan, seriazibleAnd1.Human.class);
+        Pet pet = any.fromJson(testAny, Pet.class);
+
+        System.out.println(human);
+        System.out.println(pet);
+
     }
 
 }

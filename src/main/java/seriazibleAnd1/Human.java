@@ -57,4 +57,15 @@ public class Human {
     public void setRost(Double rost) {
         this.rost = rost;
     }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", pol='" + pol + '\'' +
+                ", wes=" + wes +
+                ", rost=" + rost +
+                '}';
+    }
 }

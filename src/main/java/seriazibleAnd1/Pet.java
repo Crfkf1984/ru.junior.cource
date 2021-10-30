@@ -37,4 +37,13 @@ public class Pet {
     public void setAge(Integer age) {
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "petName='" + petName + '\'' +
+                ", petWid='" + petWid + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
