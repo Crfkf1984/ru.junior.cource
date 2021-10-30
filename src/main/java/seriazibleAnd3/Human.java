@@ -70,4 +70,16 @@ public class Human {
     public void setAny(List<Pet> any) {
         this.any = any;
     }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", pol='" + pol + '\'' +
+                ", wes=" + wes +
+                ", rost=" + rost +
+                ", any=" + any +
+                '}';
+    }
 }

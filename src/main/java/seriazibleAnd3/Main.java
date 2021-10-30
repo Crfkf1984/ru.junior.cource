@@ -18,12 +18,17 @@ public class Main {
         Gson chel = new GsonBuilder()
                 .registerTypeAdapter(seriazibleAnd3.Human.class, new HumanSerializer())
                 .registerTypeAdapter(seriazibleAnd3.Pet.class, new PetSerializer())
+                .registerTypeAdapter(seriazibleAnd3.Human.class, new HumanDeserializer())
+                .registerTypeAdapter(seriazibleAnd3.Pet.class, new PetDeserializer())
                 .setPrettyPrinting()
                 .create();
 
         String testMan = chel.toJson(man);
 
         System.out.println(testMan);
+
+        seriazibleAnd3.Human human = chel.fromJson(testMan, Human.class);
+        System.out.println(human);
 
     }
 

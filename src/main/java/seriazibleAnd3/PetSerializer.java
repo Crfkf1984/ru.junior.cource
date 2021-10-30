@@ -10,6 +10,6 @@ import java.lang.reflect.Type;
 public class PetSerializer implements JsonSerializer<Pet> {
     @Override
     public JsonElement serialize(Pet pet, Type type, JsonSerializationContext jsonSerializationContext) {
-        return new JsonPrimitive("name " + pet.getName() + " wid " + pet.getWid() + " age " + pet.getAge() );
+        return new JsonPrimitive("name " + pet.getName() + ", wid " + pet.getWid() + ", age " + pet.getAge() );
     }
 }
