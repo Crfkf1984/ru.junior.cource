@@ -23,12 +23,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ff3900-06d8-452f-98bd-211ec543b79d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/HumanSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/Pet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/PetSerializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,11 +72,14 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="seriazibleAnd3" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Project\ru.junior.cource\src\main\java\seriazibleAnd2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (3)">
+  <component name="RunManager" selected="Application.Main (4)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="seriazibleAnd1.Main" />
       <module name="ru.not.jonior.com" />
@@ -104,6 +119,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="seriazibleAnd3.Main" />
+      <module name="ru.not.jonior.com" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="seriazibleAnd3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson28and1.Main" />
       <module name="ru.not.jonior.com" />
@@ -119,9 +147,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (3)" />
-        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -150,30 +179,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="645" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1635527349513">
+    <state x="645" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1635615721309">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="645" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1635527349513" />
+    <state x="645" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1635615721309" />
     <state x="641" y="330" key="FileChooserDialogImpl" timestamp="1635365155909">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="641" y="330" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1635365155909" />
-    <state width="1637" height="272" key="GridCell.Tab.0.bottom" timestamp="1635529338567">
+    <state width="1637" height="272" key="GridCell.Tab.0.bottom" timestamp="1635616733736">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1635529338567" />
-    <state width="1637" height="272" key="GridCell.Tab.0.center" timestamp="1635529338567">
+    <state width="1637" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1635616733736" />
+    <state width="1637" height="272" key="GridCell.Tab.0.center" timestamp="1635616733735">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1635529338567" />
-    <state width="1637" height="272" key="GridCell.Tab.0.left" timestamp="1635529338567">
+    <state width="1637" height="272" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1635616733735" />
+    <state width="1637" height="272" key="GridCell.Tab.0.left" timestamp="1635616733735">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1635529338567" />
-    <state width="1637" height="272" key="GridCell.Tab.0.right" timestamp="1635529338567">
+    <state width="1637" height="272" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1635616733735" />
+    <state width="1637" height="272" key="GridCell.Tab.0.right" timestamp="1635616733735">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1635529338567" />
+    <state width="1637" height="272" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1635616733735" />
     <state x="341" y="150" key="SettingsEditor" timestamp="1635365159218">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
