@@ -8,27 +8,25 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Pet> any = new ArrayList<>();
-        Pet animal1 = new Pet("Bim", "cat",3);
-        Pet animal2 = new Pet("Tuk", "dog",5);
-        any.add(animal1);
-        any.add(animal2);
-        seriazibleAnd3.Human man = new Human("Dima",16,"boy",56.3, 174.4,any);
+        List<Pet> petList = new ArrayList<>();
+        petList.add(new Pet("Kuzya", "cat", 5));
+        petList.add(new Pet("Palkan", "dog", 4));
+        List<Human> humanBandList = new ArrayList<>();
+        humanBandList.add(new Human("Petr", 45, "mans",78.4, 167.5,petList));
+        humanBandList.add(new Human("Lena", 34, "women",65.4, 145.5,petList));
 
-        Gson chel = new GsonBuilder()
-                .registerTypeAdapter(seriazibleAnd3.Human.class, new HumanSerializer())
-                .registerTypeAdapter(seriazibleAnd3.Pet.class, new PetSerializer())
-                .registerTypeAdapter(seriazibleAnd3.Human.class, new HumanDeserializer())
-                .registerTypeAdapter(seriazibleAnd3.Pet.class, new PetDeserializer())
-                .setPrettyPrinting()
+        HumanBand humanBand = new HumanBand(humanBandList);
+
+
+        Gson gson = new GsonBuilder()
+                .setPrettyPrinting().
+                        registerTypeAdapter(Human.class, new HumanSerializeble())
+                .registerTypeAdapter(Pet.class, new PetSerializer())
+                .registerTypeAdapter(HumanSerializeBand.class, new HumanSerializeBand())
                 .create();
 
-        String testMan = chel.toJson(man);
-
-        System.out.println(testMan);
-
-        seriazibleAnd3.Human human = chel.fromJson(testMan, Human.class);
-        System.out.println(human);
+        String test = gson.toJson(humanBand);
+        System.out.println(test);
 
     }
 

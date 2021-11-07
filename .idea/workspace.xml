@@ -23,13 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ff3900-06d8-452f-98bd-211ec543b79d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/HumanDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/PetDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/HumanBand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/HumanSerializeBand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/HumanSerializeble.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/HumanDeserializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/HumanSerializer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/Pet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/PetSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/PetSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/PetDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seriazibleAnd3/PetDeserializer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,12 +123,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="seriazibleAnd3.Main" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson28and1.Main" />
       <module name="ru.not.jonior.com" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="seriazibleAnd3.*" />
+          <option name="PATTERN" value="lesson28and1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,11 +137,11 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson28and1.Main" />
+      <option name="MAIN_CLASS_NAME" value="seriazibleAnd3.Main" />
       <module name="ru.not.jonior.com" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson28and1.*" />
+          <option name="PATTERN" value="seriazibleAnd3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -180,33 +183,37 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="645" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1635619611349">
+    <state x="645" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1636298925681">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="645" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1635619611349" />
+    <state x="645" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1636298925681" />
     <state x="641" y="330" key="FileChooserDialogImpl" timestamp="1635365155909">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="641" y="330" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1635365155909" />
-    <state width="1637" height="272" key="GridCell.Tab.0.bottom" timestamp="1635623685759">
+    <state width="1637" height="272" key="GridCell.Tab.0.bottom" timestamp="1636306018516">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1635623685759" />
-    <state width="1637" height="272" key="GridCell.Tab.0.center" timestamp="1635623685758">
+    <state width="1637" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1636306018516" />
+    <state width="1637" height="272" key="GridCell.Tab.0.center" timestamp="1636306018516">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1635623685758" />
-    <state width="1637" height="272" key="GridCell.Tab.0.left" timestamp="1635623685758">
+    <state width="1637" height="272" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1636306018516" />
+    <state width="1637" height="272" key="GridCell.Tab.0.left" timestamp="1636306018516">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1635623685758" />
-    <state width="1637" height="272" key="GridCell.Tab.0.right" timestamp="1635623685758">
+    <state width="1637" height="272" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1636306018516" />
+    <state width="1637" height="272" key="GridCell.Tab.0.right" timestamp="1636306018516">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1635623685758" />
+    <state width="1637" height="272" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1636306018516" />
     <state x="341" y="150" key="SettingsEditor" timestamp="1635365159218">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="341" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1635365159218" />
+    <state x="540" y="262" key="refactoring.ChangeSignatureDialog" timestamp="1635681104354">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="540" y="262" key="refactoring.ChangeSignatureDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1635681104354" />
   </component>
 </project>

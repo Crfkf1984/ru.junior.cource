@@ -6,7 +6,6 @@ public class Human {
     private String name;
     private Integer age;
     private String pol;
-    transient
     private Double wes;
     private Double rost;
     private List<Pet> any;
