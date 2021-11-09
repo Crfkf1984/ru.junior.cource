@@ -24,4 +24,11 @@ public class HumanBand {
     public void setHumanNotList(Human human) {
         this.humans = humans;
     }
+
+    @Override
+    public String toString() {
+        return "HumanBand{" +
+                "humans=" + humans +
+                '}';
+    }
 }

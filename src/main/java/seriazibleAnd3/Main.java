@@ -23,10 +23,15 @@ public class Main {
                         registerTypeAdapter(Human.class, new HumanSerializeble())
                 .registerTypeAdapter(Pet.class, new PetSerializer())
                 .registerTypeAdapter(HumanSerializeBand.class, new HumanSerializeBand())
+                .registerTypeAdapter(Human.class, new HumanDeserialize())
+                .registerTypeAdapter(Pet.class, new PetDeserializer())
                 .create();
 
         String test = gson.toJson(humanBand);
         System.out.println(test);
+
+        HumanBand human = gson.fromJson(test, HumanBand.class);
+        System.out.println(human);
 
     }
 
