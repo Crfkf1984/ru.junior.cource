@@ -20,4 +20,8 @@ public class HumanBand {
     public void setHumans(List<Human> humans) {
         this.humans = humans;
     }
+
+    public void setHumanNotList(Human human) {
+        this.humans = humans;
+    }
 }
