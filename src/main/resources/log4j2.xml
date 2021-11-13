@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="Numb" filename="UserLog/numb.txt">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+        <File name="Result" filename="UserLog/result.txt">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+        <File name="Time" filename="UserLog/time.txt">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <root level="info">
+            <AppenderRef ref="Numb"/>
+        </root>
+    </Loggers>
+</Configuration>
