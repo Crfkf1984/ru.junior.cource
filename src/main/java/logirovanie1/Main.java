@@ -26,9 +26,10 @@ public class Main {
         boolean isTrue = true;
         Scanner scanner = new Scanner(System.in);
 
+        long time = System.currentTimeMillis();
+        logger.error(time);
+
         while (isTrue) {
-            long time = System.currentTimeMillis();
-            logger.error(time);
             boolean isFalse = false;
 
             System.out.println("Введите номер, имя или команду!");
