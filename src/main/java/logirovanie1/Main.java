@@ -27,6 +27,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while (isTrue) {
+            long time = System.currentTimeMillis();
+            logger.error(time);
             boolean isFalse = false;
 
             System.out.println("Введите номер, имя или команду!");
@@ -169,6 +171,7 @@ public class Main {
         System.out.println("Такого номера нет в телефонной книге!");
         System.out.println("Введите имя абонента для номера " + word);
         String name = res.nextLine();
+        logger.warn(name);
         if (verifyName(name)) {
             return;
         }

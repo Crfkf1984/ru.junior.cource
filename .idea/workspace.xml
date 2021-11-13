@@ -23,10 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ff3900-06d8-452f-98bd-211ec543b79d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/logirovanie1/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserLog/result.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserLog/time.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Userresult/result.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Usertime/time.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logirovanie1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logirovanie1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +54,9 @@
     </option>
   </component>
   <component name="ProjectId" id="203nTvSnhlmoPTV4xdCJ4gVR1d6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="autoscrollFromSource" value="true" />
@@ -61,6 +67,7 @@
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/seriazibleAnd2" />
@@ -194,6 +201,9 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="645" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1636482456466">
       <screen x="0" y="0" width="1680" height="1010" />
@@ -203,22 +213,22 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="641" y="330" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1635365155909" />
-    <state width="1637" height="272" key="GridCell.Tab.0.bottom" timestamp="1636796726414">
+    <state width="1637" height="272" key="GridCell.Tab.0.bottom" timestamp="1636800179234">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1636796726414" />
-    <state width="1637" height="272" key="GridCell.Tab.0.center" timestamp="1636796726414">
+    <state width="1637" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1636800179234" />
+    <state width="1637" height="272" key="GridCell.Tab.0.center" timestamp="1636800179234">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1636796726414" />
-    <state width="1637" height="272" key="GridCell.Tab.0.left" timestamp="1636796726414">
+    <state width="1637" height="272" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1636800179234" />
+    <state width="1637" height="272" key="GridCell.Tab.0.left" timestamp="1636800179234">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1636796726414" />
-    <state width="1637" height="272" key="GridCell.Tab.0.right" timestamp="1636796726414">
+    <state width="1637" height="272" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1636800179234" />
+    <state width="1637" height="272" key="GridCell.Tab.0.right" timestamp="1636800179234">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="272" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1636796726414" />
+    <state width="1637" height="272" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1636800179234" />
     <state x="341" y="150" key="SettingsEditor" timestamp="1635365159218">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
