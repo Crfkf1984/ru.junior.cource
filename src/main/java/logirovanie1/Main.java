@@ -2,15 +2,10 @@ package logirovanie1;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.Marker;
+import org.apache.logging.log4j.MarkerManager;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.regex.Pattern;
 
 public class Main {
@@ -20,21 +15,24 @@ public class Main {
     private static final String EXIT = "EXIT";
     private static Map<String, String> map = new TreeMap<>();
     private static Logger logger;
+    private static final Marker INFO = MarkerManager.getMarker("INFO");
+    private static final Marker WARN = MarkerManager.getMarker("WARN");
+    private static final Marker ERROR = MarkerManager.getMarker("ERROR");
 
     public static void main(String[] args) {
         logger = LogManager.getRootLogger();
         boolean isTrue = true;
         Scanner scanner = new Scanner(System.in);
 
-        long time = System.currentTimeMillis();
-        logger.error(time);
+        Date time = new Date();
+        logger.error(ERROR,time);
 
         while (isTrue) {
             boolean isFalse = false;
 
             System.out.println("Введите номер, имя или команду!");
             String word = scanner.nextLine();
-            logger.info(word);
+            logger.info(INFO,"пользователь ввел ",word);
 
             if (word.matches(String.valueOf(NAME))) {
                 name(word);
@@ -172,7 +170,7 @@ public class Main {
         System.out.println("Такого номера нет в телефонной книге!");
         System.out.println("Введите имя абонента для номера " + word);
         String name = res.nextLine();
-        logger.warn(name);
+        logger.warn(WARN,"после номера тел пользователь ввел ",name);
         if (verifyName(name)) {
             return;
         }

@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
     <Appenders>
-        <Console name="Console" target="SYSTEM_OUT">
+        <File name="Numb" filename="UserLog/info.txt">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-        </Console>
-        <File name="Numb" filename="UserLog/numb.txt">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Filters>
+                <MarkerFilter marker="INFO"/>
+            </Filters>
         </File>
-        <File name="Result" filename="UserResult/result.txt">
+        <File name="Result" filename="UserResult/warn.txt">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Filters>
+                <MarkerFilter marker="WARN"/>
+            </Filters>
         </File>
-        <File name="Time" filename="UserTime/time.txt">
+        <File name="Time" filename="UserTime/error.txt">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Filters>
+                <MarkerFilter marker="ERROR"/>
+            </Filters>
         </File>
     </Appenders>
     <Loggers>
