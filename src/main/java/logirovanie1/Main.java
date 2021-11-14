@@ -32,7 +32,7 @@ public class Main {
 
             System.out.println("Введите номер, имя или команду!");
             String word = scanner.nextLine();
-            logger.info(INFO,"пользователь ввел ",word);
+            logger.info(INFO,"пользователь ввел {}",word);
 
             if (word.matches(String.valueOf(NAME))) {
                 name(word);
@@ -170,7 +170,7 @@ public class Main {
         System.out.println("Такого номера нет в телефонной книге!");
         System.out.println("Введите имя абонента для номера " + word);
         String name = res.nextLine();
-        logger.warn(WARN,"после номера тел пользователь ввел ",name);
+        logger.warn(WARN,"после номера тел пользователь ввел {}",name);
         if (verifyName(name)) {
             return;
         }
