@@ -40,7 +40,7 @@ public class Main {
     public static void convert(long res, String path) {
         if (res < 1000) {
             System.out.println("размер папки " + path + " составляет " + res + " Байт");
-        } else if (res >= 1000 && res < 10000) {
+        } else if (res < 10000) {
             System.out.println("размер папки " + path + " составляет " + (res / 1000) + " КБ");
         } else {
             System.out.println("размер папки " + path + " составляет " + (res / 1000000) + " МБ");

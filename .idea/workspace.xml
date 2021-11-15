@@ -23,8 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ff3900-06d8-452f-98bd-211ec543b79d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/copyFiles/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/copyFiles/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/copyFiles/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/readFiles/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/readFiles/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,20 +81,7 @@
       <recent name="D:\Project\ru.junior.cource\src\main\java\seriazibleAnd2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (6)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="seriazibleAnd1.Main" />
-      <module name="ru.not.jonior.com" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="seriazibleAnd1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="seriazibleAnd2.Main" />
       <module name="ru.not.jonior.com" />
@@ -146,6 +134,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="copyFiles.Main" />
+      <module name="ru.not.jonior.com" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="copyFiles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ru.not.jonior.com-1.0-SNAPSHOT.jar" type="JarApplication">
       <option name="JAR_PATH" value="$PROJECT_DIR$/target/ru.not.jonior.com-1.0-SNAPSHOT.jar" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -153,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (6)" />
         <item itemvalue="Application.Main (5)" />
         <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (3)" />
-        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -196,22 +197,22 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="641" y="330" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1635365155909" />
-    <state width="1637" height="336" key="GridCell.Tab.0.bottom" timestamp="1636961406218">
+    <state width="1637" height="179" key="GridCell.Tab.0.bottom" timestamp="1636973665449">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1636961406218" />
-    <state width="1637" height="336" key="GridCell.Tab.0.center" timestamp="1636961406218">
+    <state width="1637" height="179" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1636973665449" />
+    <state width="1637" height="179" key="GridCell.Tab.0.center" timestamp="1636973665449">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1636961406218" />
-    <state width="1637" height="336" key="GridCell.Tab.0.left" timestamp="1636961406218">
+    <state width="1637" height="179" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1636973665449" />
+    <state width="1637" height="179" key="GridCell.Tab.0.left" timestamp="1636973665448">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1636961406218" />
-    <state width="1637" height="336" key="GridCell.Tab.0.right" timestamp="1636961406218">
+    <state width="1637" height="179" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1636973665448" />
+    <state width="1637" height="179" key="GridCell.Tab.0.right" timestamp="1636973665449">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="336" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1636961406218" />
+    <state width="1637" height="179" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1636973665449" />
     <state width="1637" height="336" key="GridCell.Tab.1.bottom" timestamp="1636961406218">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
