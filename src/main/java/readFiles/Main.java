@@ -2,22 +2,24 @@ package readFiles;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+//        StringBuilder sb = new StringBuilder();
+//        try {
+//            long res = Files.walk(Paths.get("D:\\Project\\ru.junior.cource")).filter(path -> path.toFile()
+//                    .isFile()).mapToLong(path-> path.toFile().length()).sum();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
         System.out.println("Введите путь до папки!");
         Scanner scanner = new Scanner(System.in);
         String path = scanner.nextLine();
         long res = calculateFolderSize(path);
-
-        if (res < 1000) {
-            System.out.println("размер папки " + path + " составляет " + res + " Байт");
-        } else if (res >= 1000 && res < 10000) {
-            System.out.println("размер папки " + path + " составляет " + (res / 1000) + " КБ");
-        } else {
-            System.out.println("размер папки " + path + " составляет " + (res / 10000) + " МБ");
-        }
+        convert(res, path);
 
     }
 
@@ -34,4 +36,15 @@ public class Main {
         }
         return sum;
     }
+
+    public static void convert(long res, String path) {
+        if (res < 1000) {
+            System.out.println("размер папки " + path + " составляет " + res + " Байт");
+        } else if (res >= 1000 && res < 10000) {
+            System.out.println("размер папки " + path + " составляет " + (res / 1000) + " КБ");
+        } else {
+            System.out.println("размер папки " + path + " составляет " + (res / 1000000) + " МБ");
+        }
+    }
+
 }
